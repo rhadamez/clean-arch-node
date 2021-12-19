@@ -5,7 +5,10 @@
     "allowJs": true,
     "sourceMap": true,
     "outDir": "dist",
-    "rootDir": "src",
+    "rootDirs": [
+      "src",
+      "tests"
+    ],
     "strict": true,
     "moduleResolution": "node",
     "baseUrl": "src",
@@ -24,6 +27,7 @@
     "forceConsistentCasingInFileNames": true
   },
   "include": [
-    "src"
+    "src",
+    "tests"
   ]
 }
