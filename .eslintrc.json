@@ -22,6 +22,8 @@
   "rules": {
     "no-use-before-define": "off",
     "space-before-function-paren": "off",
-    "no-redeclare": "off"
+    "no-redeclare": "off",
+    "no-unused-vars": "off",
+    "no-useless-constructor": "off"
   }
 }
