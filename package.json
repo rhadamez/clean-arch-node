@@ -47,6 +47,7 @@
     "node": "16.x"
   },
   "dependencies": {
+    "jest-mock": "^27.5.1",
     "module-alias": "^2.2.2",
     "rimraf": "^3.0.2"
   }
