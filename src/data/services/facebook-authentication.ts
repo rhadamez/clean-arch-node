@@ -15,7 +15,6 @@ export class FacebookAuthenticationService implements FacebookAuthentication {
 
   async perform(params: FacebookAuthentication.Params): Promise<FacebookAuthentication.Result> {
     const fbData = await this.facebookApi.loadUser(params)
-
     if (fbData) {
       const accountData = await this.userAccountRepo.load({ email: fbData.email })
       const fbAccount = new FacebookAccount(fbData, accountData)
@@ -23,7 +22,6 @@ export class FacebookAuthenticationService implements FacebookAuthentication {
       const token = await this.crypto.generateToken({ key: id, expirationInMs: AccessToken.expirationInMs })
       return new AccessToken(token)
     }
-
     return new AuthenticationError()
   }
 }
